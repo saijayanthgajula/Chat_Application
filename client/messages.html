@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>messages</title>
+    <link rel="stylesheet" type="text/css" href="./admin.css">
+    <link rel="stylesheet" type="text/css" href="./messages.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h2>Admin Dashboard</h2>
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Log Out</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="hero">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul class="sidebar-links">
+                <li><a href="/admin">Dashboard</a></li>
+                <li><a href="/users">Users</a></li>
+                <li><a href="/messages" class="active">Messages</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div id="messageList"></div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+    <script src="messages.js"></script>
+</body>
+
+</html>

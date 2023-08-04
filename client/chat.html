@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>chat page</title>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+	<div id="loader"></div>
+    <div class="container">
+        <div class="chat-box">
+            <div class="chat-header">
+                <div class=" lastCol">
+                    <div class="settings">
+                        <img src="./assets/user_profile/default.png" class="profile" id="user_image_toggle" alt="use_profile_photo">
+                        <div class="profile-menu" id="profile-menu">
+                            <img src="./assets/user_profile/default.png" alt="Profile Photo" id="user-photo" class="profile-photo">
+                            <input type="file" class="file-input" id="photo" accept="image/*">
+                            <label style="display: block; ;" for="photo" class="file-label">update profile picture <i class=""></i></label>
+                            <!-- <img src="./assets/user_profile/default.png" id="user-photo" alt="use_profile_photo"> -->
+                            <h4 class="user-name items" id="Profile_username">username</h4>
+                            <p class="user-email items" id="user-email">example@user.com</p>
+                            <button class="btn-logout " id="btn-logout">Log Out</button>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="username" id="username">
+                    username
+                </h4>
+
+            </div>
+            <div class="chatArea" id="messages"></div>
+            <div class="send-container">
+                <input type="text" placeholder="Type a message" class="sendText" id="chat-input">
+                <div class="sendcol">
+                    <button class="btnSend" id="btn_message">send</button>
+                </div>
+            </div>
+        </div>
+        <audio id="Notification" class="Notification" src="./assets/Notification.mp3"></audio>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
+    <script src="chat.js"></script>
+    <script>
+        function reloadOnVisibilityChange() {
+          if (!document.hidden) {
+            location.reload();
+          }
+        }
+  
+        window.addEventListener('visibilitychange', reloadOnVisibilityChange);
+      </script>
+</body>
+
+</html>

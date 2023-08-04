@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri, Helvetica, sans-serif;
+}
+
+
+/* Navbar styles */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+}
+
+.logo h2 {
+    font-size: 20px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+}
+
+.nav-links li {
+    margin-right: 10px;
+    justify-self: end;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+}
+
+
+/* Hamburger menu styles */
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px;
+}
+
+.hero {
+    display: flex;
+    background: #F4F7FE;
+}
+
+
+/* Sidebar styles */
+
+.sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    height: 100vh;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-links a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 8px;
+    border-radius: 6px;
+}
+
+
+/* Main content styles */
+
+.content {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #f1f1f1;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar-links a.active {
+    color: #fff;
+    background-color: #333;
+}
+
+
+/* Add the following CSS for the active state of the navbar link */
+
+.nav-links a.active {
+    color: #fff;
+}
+
+.sidebar.active {
+    display: block;
+    position: absolute;
+    width: 70%;
+}
+
+
+/* Add the following CSS for the active state of the burger menu */
+
+.burger.active .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.active .line2 {
+    opacity: 0;
+}
+
+.burger.active .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.comming-soon {
+    color: #666;
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+/* Media query for responsive design */
+
+@media (max-width: 768px) {
+    /* .nav-links {
+        display: none;
+    } */
+    .burger {
+        display: flex;
+    }
+    .sidebar {
+        display: none;
+    }
+    .content {
+        width: 100%;
+    }
+}

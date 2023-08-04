@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="stylesheet" type="text/css" href="users.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h2>Admin Dashboard</h2>
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#">Log Out</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="hero">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul class="sidebar-links">
+                <li><a href="/admin">Dashboard</a></li>
+                <li><a href="/users" class="active">Users</a></li>
+                <li><a href="/messages.html">Messages</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h1>User Management</h1>
+            <div class="btn-group">
+                <button class="btn btn-primary add-user-btn" onclick="showPopup('Create User', createUser)">Add User</button>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <!-- User data will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup" id="popup">
+                    <h2 class="form-heading" id="popupTitle">Create User</h2>
+                    <form id="userForm" class="add-user-form">
+                        <input type="text" id="name" placeholder="User Name" required>
+                        <input type="email" placeholder="Email" id="email" required>
+                        <input type="password" placeholder="Password" id="password" required>
+                        <select id="gender" required>
+                      <option value="" disabled selected>Select gender</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                        <button class="btn btn-primary" id="submitBtn">Submit</button>
+                        <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+    <script src="users.js"></script>
+
+</body>
+
+</html>
